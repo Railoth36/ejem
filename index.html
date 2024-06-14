@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculations</title>
+    <script lang="javascript" type="text/javascript">
+        function suma() {
+            var n1 = document.formu1.op1.value;
+            var n2 = document.formu1.op2.value;
+            var a = parseFloat(n1);
+            var b = parseFloat(n2);
+            var s = a + b;
+            document.formu1.re.value = s;
+        }
+
+        function resta() {
+            var n1 = document.formu2.op1.value;
+            var n2 = document.formu2.op2.value;
+            var a = parseFloat(n1);
+            var b = parseFloat(n2);
+            var r = a - b;
+            document.formu2.re.value = r;
+        }
+
+        function multiplicacion() {
+            var n1 = document.formu3.op1.value;
+            var n2 = document.formu3.op2.value;
+            var a = parseFloat(n1);
+            var b = parseFloat(n2);
+            var m = a * b;
+            document.formu3.re.value = m;
+        }
+
+        function division() {
+            var n1 = document.formu4.op1.value;
+            var n2 = document.formu4.op2.value;
+            var a = parseFloat(n1);
+            var b = parseFloat(n2);
+            if (b !== 0) {
+                var d = a / b;
+                document.formu4.re.value = d;
+            } else {
+                document.formu4.re.value = "Error: Division by zero";
+            }
+        }
+
+        function producto() {
+            var n1 = document.formu5.op1.value;
+            var n2 = document.formu5.op2.value;
+            var a = parseFloat(n1);
+            var b = parseFloat(n2);
+            var p = a * b;  // Same as multiplication
+            document.formu5.re.value = p;
+        }
+
+        function factorial() {
+            var n1 = document.formu6.op1.value;
+            var a = parseInt(n1);
+            if (a < 0) {
+                document.formu6.re.value = "Error: Negative number";
+                return;
+            }
+            var f = 1;
+            for (var i = 1; i <= a; i++) {
+                f *= i;
+            }
+            document.formu6.re.value = f;
+        }
+    </script>
+</head>
+<body>
+    <form name="formu1">
+        <table border="1" align="center">
+            <tr>
+                <td rowspan="3"><input type="button" value="Suma" onclick="suma();"></td>
+                <td>X</td>
+                <td><input type="text" name="op1"></td>
+            </tr>
+            <tr>
+                <td>Y</td>
+                <td><input type="text" name="op2"></td>
+            </tr>
+            <tr>
+                <td>Res</td>
+                <td><input type="text" name="re"></td>
+            </tr>
+        </table>
+    </form>
+
+    <form name="formu2">
+        <table border="1" align="center">
+            <tr>
+                <td rowspan="3"><input type="button" value="Resta" onclick="resta();"></td>
+                <td>X</td>
+                <td><input type="text" name="op1"></td>
+            </tr>
+            <tr>
+                <td>Y</td>
+                <td><input type="text" name="op2"></td>
+            </tr>
+            <tr>
+                <td>Res</td>
+                <td><input type="text" name="re"></td>
+            </tr>
+        </table>
+    </form>
+
+    <form name="formu3">
+        <table border="1" align="center">
+            <tr>
+                <td rowspan="3"><input type="button" value="Multiplicación" onclick="multiplicacion();"></td>
+                <td>X</td>
+                <td><input type="text" name="op1"></td>
+            </tr>
+            <tr>
+                <td>Y</td>
+                <td><input type="text" name="op2"></td>
+            </tr>
+            <tr>
+                <td>Res</td>
+                <td><input type="text" name="re"></td>
+            </tr>
+        </table>
+    </form>
+
+    <form name="formu4">
+        <table border="1" align="center">
+            <tr>
+                <td rowspan="3"><input type="button" value="División" onclick="division();"></td>
+                <td>X</td>
+                <td><input type="text" name="op1"></td>
+            </tr>
+            <tr>
+                <td>Y</td>
+                <td><input type="text" name="op2"></td>
+            </tr>
+            <tr>
+                <td>Res</td>
+                <td><input type="text" name="re"></td>
+            </tr>
+        </table>
+    </form>
+
+    <form name="formu5">
+        <table border="1" align="center">
+            <tr>
+                <td rowspan="3"><input type="button" value="Producto" onclick="producto();"></td>
+                <td>X</td>
+                <td><input type="text" name="op1"></td>
+            </tr>
+            <tr>
+                <td>Y</td>
+                <td><input type="text" name="op2"></td>
+            </tr>
+            <tr>
+                <td>Res</td>
+                <td><input type="text" name="re"></td>
+            </tr>
+        </table>
+    </form>
+
+    <form name="formu6">
+        <table border="1" align="center">
+            <tr>
+                <td rowspan="3"><input type="button" value="Factorial" onclick="factorial();"></td>
+                <td>N</td>
+                <td><input type="text" name="op1"></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td>Res</td>
+                <td><input type="text" name="re"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
